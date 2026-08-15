@@ -67,6 +67,7 @@ EstacaLab/
 
 ## Requisitos do Sistema
 
+*   **Plataforma:** A versão 1.0.0 do EstacaLab é distribuída e validada para Windows x64.
 *   **Python:** Desenvolvido e verificado utilizando a versão **Python 3.14.6**.
 *   **Bibliotecas Externas:**
     *   `customtkinter`
@@ -87,16 +88,10 @@ EstacaLab/
     ```
 
 2.  **Criar e ativar o ambiente virtual (Recomendável):**
-    *   **No Windows:**
-        ```bash
-        python -m venv .venv
-        .venv\Scripts\activate
-        ```
-    *   **No Linux/macOS:**
-        ```bash
-        python3 -m venv .venv
-        source .venv/bin/activate
-        ```
+    ```bash
+    python -m venv .venv
+    .venv\Scripts\activate
+    ```
 
 3.  **Instalar as dependências:**
     ```bash
