@@ -61,7 +61,7 @@ def resultBerberian(
         if '.' in str_n:
             partes = str_n.split('.')
             if partes[1] != '0':
-                casas = max(casas_decimais, len(partes[1]))
+                casas_decimais = max(casas_decimais, len(partes[1]))
 
     # 2. Configurações iniciais
     cotas = [-(i + 1) for i in range(len(listaTipoSolo))]
