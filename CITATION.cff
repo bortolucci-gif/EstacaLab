@@ -4,7 +4,7 @@ authors:
   - family-names: "Bortolucci"
     given-names: "Willian"
 title: "EstacaLab"
-version: "1.0.0"
+version: "1.0.1"
 license: "PolyForm-Noncommercial-1.0.0"
 repository-code: "https://github.com/bortolucci-gif/EstacaLab"
-date-released: 2026-08-15
+

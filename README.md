@@ -67,7 +67,7 @@ EstacaLab/
 
 ## Requisitos do Sistema
 
-*   **Plataforma:** A versão 1.0.0 do EstacaLab é distribuída e validada para Windows x64.
+*   **Plataforma:** A versão 1.0.1 do EstacaLab é distribuída e validada para Windows x64.
 *   **Python:** Desenvolvido e verificado utilizando a versão **Python 3.14.6**.
 *   **Bibliotecas Externas:**
     *   `customtkinter`
@@ -142,7 +142,7 @@ O licenciamento do software não representa validação geotécnica ou certifica
 
 A versão do software correspondente à versão apresentada no Trabalho de Conclusão de Curso será identificada pela tag `v1.0.0` e pelo respectivo commit de congelamento. Essas informações serão preenchidas após a criação do repositório e da release.
 
-*   **Versão atual:** 1.0.0 (Candidata a Congelamento)
+*   **Versão atual:** 1.0.1 (Patch pós-congelamento)
 
 ---
 

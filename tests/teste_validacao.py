@@ -85,9 +85,11 @@ print(df_rec.to_string(index=False))
 print('')
 
 # --- ASSERTS DE REGRESSÃO ---
-assert df_media["Carga Adm. (kN)"].max() == 121.0, "Falha na Media"
+assert df_media["Carga Adm. (kN)"].max() == 136.0, "Falha na Media"
 assert df_aoki["Carga Adm. (kN)"].max() == 90.0, "Falha Aoki"
-assert df_decourt["Carga Adm. Adotada (kN)"].max() == 121.0, "Falha Decourt"
+# Décourt–Quaresma:
+# FS lateral = 1,3 e FS ponta = 4,0.
+assert df_decourt["Carga Adm. Adotada (kN)"].max() == 156.0, "Falha Decourt"
 assert df_teixeira["Carga Adm. (kN)"].max() == 233.0, "Falha Teixeira"
 assert df_monteiro["Carga Adm. (kN)"].max() == 149, "Falha Monteiro Max"
 assert df_berberian["Carga Adm. (kN)"].max() == 76, "Falha Berberian Max"
@@ -134,9 +136,17 @@ def chk_metodo(df, cota, rtot, adm, col_adm='Carga Adm. (kN)'):
     assert row[col_adm] == adm
 
 # Decourt
-chk_metodo(df_decourt, -2, 15, 8, 'Carga Adm. Adotada (kN)')
-chk_metodo(df_decourt, -6, 123, 54, 'Carga Adm. Adotada (kN)')
-chk_metodo(df_decourt, -13, 311, 78, 'Carga Adm. Adotada (kN)')
+chk_metodo(df_decourt, -2, 15, 4, 'Carga Adm. Adotada (kN)')
+chk_metodo(df_decourt, -6, 123, 62, 'Carga Adm. Adotada (kN)')
+chk_metodo(df_decourt, -13, 311, 156, 'Carga Adm. Adotada (kN)')
+
+# Teste de regressão contra inversão de fatores (1.3 e 4.0) no método Décourt-Quaresma
+assert df_decourt.loc[df_decourt['Cota (m)'] == -6, 'Critério Rl/1,3 + Rp/4 (kN)'].iloc[0] == 72, "Regressão Décourt: fatores invertidos (deve ser Rl/1.3 + Rp/4)"
+
+# Verificação estrutural do nome da coluna
+assert 'Critério Rl/1,3 + Rp/4 (kN)' in df_decourt.columns
+assert 'Critério Rl/1.3 + Rp/4 (kN)' not in df_decourt.columns
+assert 'Critério Rl/4 + Rp/1.3 (kN)' not in df_decourt.columns
 
 # Teixeira
 chk_metodo(df_teixeira, -2, 16, 8)

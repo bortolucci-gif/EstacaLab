@@ -333,7 +333,7 @@ class AppEstacaLab(ctk.CTk):
         dev_frame = ctk.CTkFrame(nav_frame, fg_color="transparent")
         dev_frame.grid(row=row_nav, column=0, pady=(15, 8), sticky="sw", padx=16)
         
-        ctk.CTkLabel(dev_frame, text="v1.0 • 2026",
+        ctk.CTkLabel(dev_frame, text="v1.0.1 • 2026",
                      font=FONTE_CAPTION,
                      text_color="#475569").pack(anchor="w")
         ctk.CTkLabel(dev_frame, text="Desenvolvido por:",

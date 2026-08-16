@@ -282,7 +282,7 @@ class TelaMemoria(ctk.CTkFrame):
         par("EstacaLab")
         par("Sistema Computacional para Análise de Fundações Profundas")
         sep()
-        par("Versão: 1.0")
+        par("Versão: 1.0.1")
         par("Ano: 2026")
         sep()
         par("Desenvolvido por:")
@@ -648,7 +648,7 @@ class TelaMemoria(ctk.CTkFrame):
             elementos.append(Spacer(1, 0.5*cm))
             elementos.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor("#E2E8F0")))
             elementos.append(Paragraph("INFORMAÇÕES DO SOFTWARE", est_h1))
-            elementos.append(Paragraph("EstacaLab – versão 1.0 – 2026<br/><br/>Desenvolvido por:<br/><b>Willian Bortolucci</b>", est_corpo))
+            elementos.append(Paragraph("EstacaLab – versão 1.0.1 – 2026<br/><br/>Desenvolvido por:<br/><b>Willian Bortolucci</b>", est_corpo))
             
             elementos.append(Spacer(1, 0.5*cm))
             elementos.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor("#E2E8F0")))

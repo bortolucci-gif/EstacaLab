@@ -137,7 +137,7 @@ def resultDecourt(
     criterio_1 = [int(round((r / 2) + 1e-9, 0)) for r in resistencia_total]
 
     criterio_2 = [
-        int(round(((rl_kn_list[i] / 4) + (rb_kn_list[i] / 1.3)) + 1e-9, 0))
+        int(round(((rl_kn_list[i] / 1.3) + (rb_kn_list[i] / 4)) + 1e-9, 0))
         for i in range(len(listaTipoSolo))
     ]
 
@@ -152,7 +152,7 @@ def resultDecourt(
         'Rb (kN)': rb_kn_list, 'rl (kPa)': rl_kpa_list, 'Rl (kN)': rl_kn_list,
         'R. Total (kN)': resistencia_total,
         'Critério R. Total/2 (kN)': criterio_1,
-        'Critério Rl/4 + Rp/1.3 (kN)': criterio_2,
+        'Critério Rl/1,3 + Rp/4 (kN)': criterio_2,
         'Carga Adm. Adotada (kN)': carga_adm,
         'Tipo de Solo': nomes_solo
     })

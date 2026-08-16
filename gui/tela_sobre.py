@@ -35,7 +35,7 @@ class TelaSobre(ctk.CTkFrame):
         info_frame = ctk.CTkFrame(card_sobre.corpo, fg_color="transparent")
         info_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
-        ctk.CTkLabel(info_frame, text="Versão 1.0 – 2026", font=FONTE_LABEL_BOLD, text_color=COR_TEXTO_PRIMARIO).pack(anchor="w", pady=(0, 15))
+        ctk.CTkLabel(info_frame, text="Versão 1.0.1 – 2026", font=FONTE_LABEL_BOLD, text_color=COR_TEXTO_PRIMARIO).pack(anchor="w", pady=(0, 15))
         
         ctk.CTkLabel(info_frame, text="Desenvolvido por:", font=FONTE_LABEL_SM, text_color=COR_TEXTO_SECUNDARIO).pack(anchor="w")
         ctk.CTkLabel(info_frame, text="Willian Bortolucci", font=FONTE_LABEL_BOLD, text_color=COR_TEXTO_PRIMARIO).pack(anchor="w", pady=(0, 15))
